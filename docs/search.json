@@ -24,7 +24,7 @@
     "href": "plots.html",
     "title": "Visualizations",
     "section": "",
-    "text": "Warning: Expected 3 pieces. Additional pieces discarded in 6 rows [1, 2, 3, 4,\n5, 14].",
+    "text": "Code\nverbum_clean |&gt; \n  count(term, age_relative_definition) |&gt; \n  filter(!is.na(age_relative_definition)) |&gt; \n  mutate(term = str_replace(term, \"[/ⲻ]\", \" \")) |&gt; \n  ggplot(aes(term, n, fill = age_relative_definition)) +\n  geom_col(show.legend = FALSE) +\n  facet_wrap(~age_relative_definition, scales = \"free\") +\n  coord_flip() +\n  theme_minimal() +\n  theme(axis.text.y = element_text(family = \"Noto Sans Coptic\", size = 10),\n        strip.text = element_text(face = \"bold\", size = 11))\n\n\n\n\n\nDistribution of terms across labels",
     "crumbs": [
       "Visualizations"
     ]
@@ -34,7 +34,17 @@
     "href": "plots.html#age-definitions-by-gender",
     "title": "Visualizations",
     "section": "",
-    "text": "Warning: Expected 3 pieces. Additional pieces discarded in 6 rows [1, 2, 3, 4,\n5, 14].",
+    "text": "Code\nverbum_clean |&gt; \n  count(term, age_relative_definition) |&gt; \n  filter(!is.na(age_relative_definition)) |&gt; \n  mutate(term = str_replace(term, \"[/ⲻ]\", \" \")) |&gt; \n  ggplot(aes(term, n, fill = age_relative_definition)) +\n  geom_col(show.legend = FALSE) +\n  facet_wrap(~age_relative_definition, scales = \"free\") +\n  coord_flip() +\n  theme_minimal() +\n  theme(axis.text.y = element_text(family = \"Noto Sans Coptic\", size = 10),\n        strip.text = element_text(face = \"bold\", size = 11))\n\n\n\n\n\nDistribution of terms across labels",
+    "crumbs": [
+      "Visualizations"
+    ]
+  },
+  {
+    "objectID": "plots.html#age-labels-by-terms",
+    "href": "plots.html#age-labels-by-terms",
+    "title": "Visualizations",
+    "section": "Age Labels by Terms",
+    "text": "Age Labels by Terms",
     "crumbs": [
       "Visualizations"
     ]

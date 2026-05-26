@@ -15,12 +15,10 @@ verbum_clean <- verbum_df |>
   separate(primary_references, into = c("author", "title", "para")) |> 
   group_by(author, title, para) |> 
   mutate(local_id = row_number(), .after = para)
+```
 
-#| echo: false
-#| warning: false
-#| fig-cap: "Distribution of age definitions across genders"
-#| fig-alt: "Bar plot showing age definition categories by gender"
 
+```{r echo=FALSE, message=FALSE}
 verbum_clean |> 
   count(gender, age_relative_definition) |> 
   mutate(age_relative_definition = str_remove(age_relative_definition, " age")) |> 
@@ -33,5 +31,25 @@ verbum_clean |>
   theme(legend.position = "bottom",
         plot.title = element_text(hjust = 0.5, face = "bold"),
         axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
+## Age Labels by Terms
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+verbum_clean |> 
+  count(term, age_relative_definition) |> 
+  filter(!is.na(age_relative_definition)) |> 
+  mutate(term = str_replace(term, "[/ⲻ]", " ")) |> 
+  ggplot(aes(term, n, fill = age_relative_definition)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~age_relative_definition, scales = "free") +
+  coord_flip() +
+  theme_minimal() +
+  labs(title = "Funky Coptic Stuff") +
+  theme(axis.text.y = element_text(family = "Noto Sans Coptic", size = 10),
+        strip.text = element_text(face = "bold", size = 11))
 ```
