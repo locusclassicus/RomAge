@@ -1,0 +1,52 @@
+---
+title: "VERBUM Corpus Analysis"
+---
+
+## About This Project
+
+This interactive website presents analysis of the VERBUM corpus, examining age definitions and their relationship with gender and terminology.
+
+### Key Features
+
+
+- **Interactive Tables**: Search, sort, and filter the complete dataset
+- **Visualizations**: Age distribution patterns across different terms
+- **Cross-references**: Linked primary sources for each entry
+
+
+### Navigation
+
+Use the sidebar to explore:
+- 📊 **Interactive Tables** - Full dataset with filtering
+- 📈 **Plots** - Visual analysis of age definitions
+
+### Data Summary
+
+```{r}
+#| echo: false
+#| warning: false
+library(tidyverse)
+
+
+verbum_df <- readxl::read_xlsx("VERBUM.xlsx")
+
+verbum_clean <- verbum_df |> 
+  rename_with(~ tolower(str_replace_all(.x, " +", "_"))) |> 
+  mutate(across(where(is.character), ~ na_if(.x, "n/a"))) |> 
+  separate(primary_references, into = c("author", "title", "para")) |> 
+  group_by(author, title, para) |> 
+  mutate(local_id = row_number(), .after = para)
+
+
+# Brief summary statistics
+verbum_clean |> 
+  summarise(
+    Total_Entries = n(),
+    Unique_Terms = n_distinct(term),
+    Genders = paste(unique(gender[!is.na(gender)]), collapse = ", "),
+    Age_Groups = paste(unique(age_relative_definition[!is.na(age_relative_definition)]), 
+                      collapse = ", ")
+  ) |> 
+  knitr::kable(caption = "Dataset Overview")
+
+```

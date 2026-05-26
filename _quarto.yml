@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "VERBUM Corpus Analysis"
+  sidebar:
+    style: "floating"
+    contents:
+      - index.qmd
+      - tables.qmd
+      - plots.qmd
+
+format:
+  html:
+    theme: 
+      light: flatly
+      dark: darkly
+    code-fold: true
+    toc: true

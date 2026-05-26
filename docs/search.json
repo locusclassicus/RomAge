@@ -1,0 +1,42 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "VERBUM Corpus Analysis",
+    "section": "",
+    "text": "This interactive website presents analysis of the VERBUM corpus, examining age definitions and their relationship with gender and terminology.\n\n\n\nInteractive Tables: Search, sort, and filter the complete dataset\nVisualizations: Age distribution patterns across different terms\nCross-references: Linked primary sources for each entry\n\n\n\n\nUse the sidebar to explore: - 📊 Interactive Tables - Full dataset with filtering - 📈 Plots - Visual analysis of age definitions\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDataset Overview\n\n\n\n\n\n\n\n\n\n\n\nauthor\ntitle\npara\nTotal_Entries\nUnique_Terms\nGenders\nAge_Groups\n\n\n\n\nCanons\nShenoute\n104\n1\n1\nm/f\nadvanced old age\n\n\nCanons\nShenoute\n169\n1\n1\nm/f\nold age\n\n\nCanons\nShenoute\n175\n2\n2\nm, f\nold age\n\n\nCanons\nShenoute\n202\n1\n1\nm/f\nadvanced old age\n\n\nCanons\nShenoute\n219\n1\n1\nf\nadvanced old age\n\n\nCanons\nShenoute\n258\n1\n1\nm/f\nold age\n\n\nCanons\nShenoute\n305\n1\n1\nm/f\n\n\n\nCanons\nShenoute\n357\n1\n1\nm/f\nadvanced old age\n\n\nCanons\nShenoute\n359\n1\n1\nm/f\nold age\n\n\nCanons\nShenoute\n5\n1\n1\nm/f\nmature/old age\n\n\nCanons\nShenoute\n53\n1\n1\nm\nmature age\n\n\nCanons\nShenoute\n61\n1\n1\nf\nmature age\n\n\nCanons\nShenoute\n66\n1\n1\nm/f\nold age",
+    "crumbs": [
+      "VERBUM Corpus Analysis"
+    ]
+  },
+  {
+    "objectID": "index.html#about-this-project",
+    "href": "index.html#about-this-project",
+    "title": "VERBUM Corpus Analysis",
+    "section": "",
+    "text": "This interactive website presents analysis of the VERBUM corpus, examining age definitions and their relationship with gender and terminology.\n\n\n\nInteractive Tables: Search, sort, and filter the complete dataset\nVisualizations: Age distribution patterns across different terms\nCross-references: Linked primary sources for each entry\n\n\n\n\nUse the sidebar to explore: - 📊 Interactive Tables - Full dataset with filtering - 📈 Plots - Visual analysis of age definitions\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDataset Overview\n\n\n\n\n\n\n\n\n\n\n\nauthor\ntitle\npara\nTotal_Entries\nUnique_Terms\nGenders\nAge_Groups\n\n\n\n\nCanons\nShenoute\n104\n1\n1\nm/f\nadvanced old age\n\n\nCanons\nShenoute\n169\n1\n1\nm/f\nold age\n\n\nCanons\nShenoute\n175\n2\n2\nm, f\nold age\n\n\nCanons\nShenoute\n202\n1\n1\nm/f\nadvanced old age\n\n\nCanons\nShenoute\n219\n1\n1\nf\nadvanced old age\n\n\nCanons\nShenoute\n258\n1\n1\nm/f\nold age\n\n\nCanons\nShenoute\n305\n1\n1\nm/f\n\n\n\nCanons\nShenoute\n357\n1\n1\nm/f\nadvanced old age\n\n\nCanons\nShenoute\n359\n1\n1\nm/f\nold age\n\n\nCanons\nShenoute\n5\n1\n1\nm/f\nmature/old age\n\n\nCanons\nShenoute\n53\n1\n1\nm\nmature age\n\n\nCanons\nShenoute\n61\n1\n1\nf\nmature age\n\n\nCanons\nShenoute\n66\n1\n1\nm/f\nold age",
+    "crumbs": [
+      "VERBUM Corpus Analysis"
+    ]
+  },
+  {
+    "objectID": "plots.html",
+    "href": "plots.html",
+    "title": "Visualizations",
+    "section": "",
+    "text": "Warning: Expected 3 pieces. Additional pieces discarded in 6 rows [1, 2, 3, 4,\n5, 14].",
+    "crumbs": [
+      "Visualizations"
+    ]
+  },
+  {
+    "objectID": "plots.html#age-definitions-by-gender",
+    "href": "plots.html#age-definitions-by-gender",
+    "title": "Visualizations",
+    "section": "",
+    "text": "Warning: Expected 3 pieces. Additional pieces discarded in 6 rows [1, 2, 3, 4,\n5, 14].",
+    "crumbs": [
+      "Visualizations"
+    ]
+  }
+]

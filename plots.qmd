@@ -1,0 +1,37 @@
+---
+title: "Visualizations"
+---
+
+## Age Definitions by Gender
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+
+verbum_df <- readxl::read_xlsx("VERBUM.xlsx")
+
+verbum_clean <- verbum_df |> 
+  rename_with(~ tolower(str_replace_all(.x, " +", "_"))) |> 
+  mutate(across(where(is.character), ~ na_if(.x, "n/a"))) |> 
+  separate(primary_references, into = c("author", "title", "para")) |> 
+  group_by(author, title, para) |> 
+  mutate(local_id = row_number(), .after = para)
+
+#| echo: false
+#| warning: false
+#| fig-cap: "Distribution of age definitions across genders"
+#| fig-alt: "Bar plot showing age definition categories by gender"
+
+verbum_clean |> 
+  count(gender, age_relative_definition) |> 
+  mutate(age_relative_definition = str_remove(age_relative_definition, " age")) |> 
+  filter(!is.na(age_relative_definition)) |> 
+  ggplot(aes(age_relative_definition, n, fill = gender)) +
+  geom_col(position = "stack") +
+  labs(x = NULL, y = "Count", 
+       title = "Age Definitions by Gender") +
+  theme_minimal() +
+  theme(legend.position = "bottom",
+        plot.title = element_text(hjust = 0.5, face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
