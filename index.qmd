@@ -17,6 +17,7 @@ This interactive website presents analysis of the VERBUM corpus, examining age d
 ### Navigation
 
 Use the sidebar to explore:
+
 - 📊 **Interactive Tables** - Full dataset with filtering
 - 📈 **Plots** - Visual analysis of age definitions
 
